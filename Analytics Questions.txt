@@ -1,0 +1,30 @@
+Q1 -- Find the top 10 pickup locations based on the number of trips
+SELECT pickup_location_id, COUNT(pickup_location_id) as frequency
+FROM  `amritaneogi-project.uber_data_analytics.fact_table`
+GROUP BY pickup_location_id
+ORDER BY frequency DESC
+LIMIT 10;
+
+Q2 -- Find the total number of trips by passenger count
+SELECT b.passenger_count_id, COUNT(b.passenger_count) as total_trips
+FROM  `amritaneogi-project.uber_data_analytics.fact_table` a
+JOIN `amritaneogi-project.uber_data_analytics.passenger_count_dim` b
+ON a.passenger_count_id = b.passenger_count_id
+GROUP BY b.passenger_count_id;
+
+Q3 -- Find the average fare amount by hour of the day - PICK_HOUR 
+--- Pick hour
+SELECT b.pickup_hour, AVG(a.fare_amount) as avg_fare_amount
+FROM `amritaneogi-project.uber_data_analytics.fact_table` a
+JOIN `amritaneogi-project.uber_data_analytics.datetime_dim` b
+ON a.datetime_id = b.datetime_id
+GROUP BY b.pickup_hour
+ORDER BY b.pickup_hour ASC;
+
+---Dropoff hour
+SELECT d.dropoff_hour, AVG(f.fare_amount) as avg_fare_amount
+FROM `amritaneogi-project.uber_data_analytics.fact_table` f
+JOIN `amritaneogi-project.uber_data_analytics.datetime_dim` d
+ON f.datetime_id = d.datetime_id
+GROUP BY d.dropoff_hour
+ORDER BY d.dropoff_hour ASC;
