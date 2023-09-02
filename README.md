@@ -10,4 +10,5 @@ Data Dictionary: https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_tr
 
 ## Data Model
 
-<div class="image-container"><img src="/images/uber_data_model.jpeg" alt="Project Image"> </div>
+Dataset source : https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+Data dictionary: 
