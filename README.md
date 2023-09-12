@@ -11,3 +11,6 @@ Data Dictionary: https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_tr
 ## Data Model
 <div class="image-container"><img src="/images/uber_data_model.jpeg" alt="Project Image"> </div>
 
+## Dashboard
+<a href = https://lookerstudio.google.com/s/s-nnQQB79Kw style="text-decoration: none;"> Looker</a>
+<div class="image-container"><img src="/Dashboard/uber_dashboard.jpg" alt="Project Image"> </div>
